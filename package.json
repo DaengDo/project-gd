@@ -7,7 +7,8 @@
     "dev": "vite",
     "build": "tsc -b && vite build",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "deploy": "pnpm run build && git switch gh-pages && cmd /c \"robocopy dist . /E || exit 0\" && git add . && git commit -m \"Deploy to GitHub Pages\" && git push origin gh-pages && git switch main"
   },
   "dependencies": {
     "react": "^18.3.1",
