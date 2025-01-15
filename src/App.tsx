@@ -39,6 +39,12 @@ function App() {
     });
   };
 
+  const getWeaponeStatus = (weapon: number | null) => {
+    if (weapon === null) return ""; // 초기값
+    if (weapon === 0) return "망가짐";
+    return `내구도 (${weapon})`;
+  };
+
   return (
     <>
       <button onClick={handleClickReset}>reset</button>
@@ -66,14 +72,9 @@ function App() {
         <div style={{ width: "200px" }}>
           <h2>무기</h2>
           <ul>
-            <li>
-              🏹 활: {weapons.bow === 0 ? "부러짐" : `내구도 (${weapons.bow})`}
-            </li>
+            <li>🏹 활: {getWeaponeStatus(weapons.bow)}</li>
             <li>↗️ 화살: {weapons.arrows}</li>
-            <li>
-              🗡️ 도검:{" "}
-              {weapons.sword === 0 ? "부러짐" : `내구도 (${weapons.sword})`}
-            </li>
+            <li>🗡️ 도검: {getWeaponeStatus(weapons.sword)}</li>
           </ul>
         </div>
       </div>
