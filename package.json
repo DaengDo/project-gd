@@ -11,11 +11,13 @@
     "deploy": "pnpm run build && git switch gh-pages && cmd /c \"robocopy dist . /E || exit 0\" && git add . && git commit -m \"Deploy to GitHub Pages\" && git push origin gh-pages && git switch main"
   },
   "dependencies": {
+    "@stylexjs/stylex": "^0.10.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1"
   },
   "devDependencies": {
     "@eslint/js": "^9.17.0",
+    "@stylexjs/eslint-plugin": "^0.10.0",
     "@types/react": "^18.3.18",
     "@types/react-dom": "^18.3.5",
     "@vitejs/plugin-react-swc": "^3.5.0",
@@ -27,6 +29,7 @@
     "globals": "^15.14.0",
     "typescript": "~5.6.2",
     "typescript-eslint": "^8.18.2",
-    "vite": "^6.0.5"
+    "vite": "^6.0.5",
+    "vite-plugin-stylex": "^0.13.0"
   }
 }
