@@ -1,0 +1,13 @@
+[
+  { "type": "식량 수집", "probability": 0.5 },
+  { "type": "질병", "probability": 0.5 },
+  { "type": "말 조우", "probability": 0.5 },
+  { "type": "왜군 정찰병 조우", "probability": 0.5 },
+  { "type": "호랑이 조우", "probability": 0.5 },
+  { "type": "맷돼지 조우", "probability": 0.5 },
+  { "type": "나그네 조우", "probability": 0.5 },
+  { "type": "장사치 조우", "probability": 0.5 },
+  { "type": "조선군 탈영병 조우", "probability": 0.5 },
+  { "type": "이일 조우", "probability": 0.1 },
+  { "type": "고니시 조우", "probability": 0.1 }
+]
