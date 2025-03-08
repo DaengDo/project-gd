@@ -1,14 +1,14 @@
 import { useReducer } from "react";
 
-import randomEventList from "./randomEvent.json";
+import RANDOM_EVENT_LIST from "./randomEvent.json";
 import { randomEventReducer } from "./randomEventReducer";
 import { RandomEventContext } from "./RandomEventContext";
 
 const RandomEventProvider = ({ children }: { children: React.ReactNode }) => {
-  const [randomEvent, dispatch] = useReducer(randomEventReducer, randomEventList);
+  const [randomEvents, dispatch] = useReducer(randomEventReducer, RANDOM_EVENT_LIST);
 
   return (
-    <RandomEventContext.Provider value={{ dispatch, randomEvent }}>
+    <RandomEventContext.Provider value={{ dispatch, randomEvents }}>
       {children}
     </RandomEventContext.Provider>
   );

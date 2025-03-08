@@ -1,7 +1,7 @@
 import { ResetButton } from "./ResetButton";
 import { ResourceProvider } from "./resource/ResourceProvider";
 import { ResourceInterface } from "./resource/ResourceInterface";
-import { RandomEventProvider } from "./event/randomEventProvider";
+import { RandomEventProvider } from "./event/RandomEventProvider";
 import { RichText } from "./interface/RichText";
 
 const App = () => (

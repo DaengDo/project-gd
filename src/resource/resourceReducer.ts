@@ -49,7 +49,7 @@ const resourceReducer = (state: Resource, action: ResourceAction): Resource => {
   }
 
   if (action.type === "reset") {
-    return mapState(([k]) => [k, getRangedRandom(RESOURCE.MIN, RESOURCE.MAX)]);
+    return mapState(([k]) => [k, k === "gganbu" ? 0 : getRangedRandom(RESOURCE.MIN, RESOURCE.MAX)]);
   }
 
   throw new TypeError("action.type does not matched");

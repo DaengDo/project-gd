@@ -15,6 +15,7 @@ const ResourceProvider = ({ children }: { children: React.ReactNode }) => {
     arrows: getRangedRandom(RESOURCE.MIN, RESOURCE.MAX),
     bow: getRangedRandom(RESOURCE.MIN, RESOURCE.MAX),
     sword: getRangedRandom(RESOURCE.MIN, RESOURCE.MAX),
+    gganbu: 0,
   });
 
   return (

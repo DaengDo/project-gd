@@ -6,7 +6,7 @@ type Resource = {
   bow: number;
   arrows: number;
   sword: number;
-  // prevEvent: [] // 5개 되면 엔딩
+  gganbu: number;
 };
 
 export type { Resource };

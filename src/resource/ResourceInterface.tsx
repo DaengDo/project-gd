@@ -28,6 +28,7 @@ const ResourceInterface = () => {
           <li>🚰 식수: {resource.water}</li>
           <li>🧦 면포: {resource.cloth}</li>
           <li>🌿 약초: {resource.herb}</li>
+          <li>🧍‍♂️ 깐부: {resource.gganbu}</li>
         </ul>
       </div>
 

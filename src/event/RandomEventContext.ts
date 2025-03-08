@@ -4,7 +4,8 @@ import { RandomEventAction } from "./randomEventReducer";
 import { RandomEvent } from "./randomEventType";
 
 const RandomEventContext = createContext<{
-  randomEvent: RandomEvent[];
+  prevEvents: string[];
+  randomEvents: RandomEvent[];
   dispatch: React.Dispatch<RandomEventAction>;
 } | null>(null);
 

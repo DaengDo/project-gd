@@ -1,20 +1,26 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { useRandomEvent } from "../event/useRandomEvent";
-import { useResource } from "../resource/useResource";
+
 import { getWeightedRandom } from "../utils/algorithm";
 
 const RichText = () => {
-  const { randomEvent } = useRandomEvent();
-  // const { resource } = useResource();
+  const { randomEvents } = useRandomEvent();
+
+  const [prevEvents, setPrevEvents] = useState<string[]>();
 
   useEffect(() => {
     const eventList = getWeightedRandom(
-      randomEvent.map((e) => ({ key: e.type, weight: e.probability })),
+      randomEvents.map((e) => ({ key: e.type, weight: e.probability })),
     );
     console.log(eventList);
   }, []);
 
-  return <div>text</div>;
+  return (
+    <>
+      {/* <h1>{resource.prevEvent.length}</h1> */}
+      <div>text</div>
+    </>
+  );
 };
 
 export { RichText };
